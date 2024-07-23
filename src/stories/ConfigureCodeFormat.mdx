@@ -1,0 +1,58 @@
+import { Meta } from "@storybook/blocks";
+
+
+export const RightArrow = () => <svg 
+    viewBox="0 0 14 14" 
+    width="8px" 
+    height="14px" 
+>
+  <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
+</svg>
+
+<Meta title="Configure code format" />
+
+### TailwindCSS
+
+```
+1.npm i tailwindcss
+
+2.vscode installs 'Tailwind CSS IntelliSense' plugin and settings:
+
+//to tell VS Code to always open .css files in Tailwind CSS mode:
+"files.associations": {
+  "*.css": "tailwindcss"
+}
+
+//to make VS Code trigger completions when editing "string" content
+"editor.quickSuggestions": {
+  "strings": "on"
+}
+```
+
+### Prettier
+
+``` 
+1.create a file ConfigureCodeFormat.mdx in the root folder and then write code:
+module.exports = {
+  plugins: ["prettier-plugin-tailwindcss"]
+}
+
+2.then install Prettier extension.
+
+//To ensure that this extension is used over other extensions you may have installed
+Editor: Default Formatter-----> prettier-Code Formatter
+
+3..eslintrc.json
+add item: "prettier"
+```
+
+### Prisma
+
+``` 
+install Prisma extension and don't need any special configuration
+```
+
+### ESLINT 
+```
+install eslint exntension to execute code warnings directly in your IDE
+```
